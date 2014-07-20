@@ -1,0 +1,37 @@
+{
+  "name": "ws_server",
+  "version": "0.1.0",
+  "description": "A websocket server to support telep.",
+  "main": "./lib/ws_server.js",
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:naiveroboticist/ws_server.git"
+  },
+  "bin": {
+    "ws_server": "./bin/ws_server"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "commander": ">=2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "sinon": "^1.10.3",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "websocket",
+    "server",
+    "telep"
+  ],
+  "author": "Naive Roboticist",
+  "license": "MIT"
+}

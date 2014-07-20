@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+// -*- javascript -*-
+
+var program = require('commander');
+var ws_server = require('../lib/ws_server');
+
+// Set up the command line arguments
+program.
+  version('0.1.0').
+  option('-c, --cert [name]', 
+         'Specify the name of the cert. Default is \'daneel-telep\'', 
+         'daneel-telep').
+  option('-p, --port [port]]', 
+         'Specify the port to use. Default is \'8081\'', 
+         '8081').
+  option('-t, --tube [tube]',
+         'Specify the beanstalk tube to watch. Default is \'notify\'',
+         'notify').
+  parse(process.argv)
+
+cfg = {
+  ssl: true,
+  port: parseInt(program.port),
+  ssl_key: '/etc/pki/tls/private/' + program.cert + '.key',
+  ssl_cert: '/etc/pki/tls/certs/' + program.cert + '.crt',
+  tube: program.tube
+};
+
+ws_server.start(cfg);
