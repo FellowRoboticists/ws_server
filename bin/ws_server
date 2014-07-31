@@ -26,4 +26,6 @@ cfg = {
   tube: program.tube
 };
 
-ws_server.start(cfg);
+ws_server.start_ws_server(cfg);
+
+ws_server.watch_notification_tube(cfg);
