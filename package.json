@@ -1,6 +1,6 @@
 {
   "name": "ws_server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A websocket server to support telep.",
   "main": "./lib/ws_server.js",
   "engines": {
@@ -17,7 +17,10 @@
     "test": "test"
   },
   "dependencies": {
-    "commander": ">=2.3.0"
+    "ain2": ">=1.3.2",
+    "commander": ">=2.3.0",
+    "nodestalker": ">=0.1.10",
+    "ws": ">=0.4.31
   },
   "devDependencies": {
     "chai": ">=1.9.1",
